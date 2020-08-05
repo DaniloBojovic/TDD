@@ -1,0 +1,37 @@
+{
+  "name": "tddbyexample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "./node_modules/ts-mocha/bin/ts-mocha -p ./tsconfig.json ./**/*.test.ts -w --watch-extensions ts",
+    "test": "mocha -r ts-node/register \"test/**/*.spec.ts\""
+  },
+  "author": "",
+  "license": "ISC",
+  "nyc": {
+    "extension": [
+      ".ts",
+      ".tsx"
+    ],
+    "require": [
+      "ts-node/register"
+    ],
+    "reporter": [
+      "text-summary",
+      "html"
+    ],
+    "all": true,
+    "sourceMap": true,
+    "instrument": true
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.12",
+    "@types/mocha": "^8.0.1",
+    "chai": "^4.2.0",
+    "mocha": "^8.1.0",
+    "nyc": "^15.1.0",
+    "ts-mocha": "^7.0.0",
+    "typescript": "^3.9.7"
+  }
+}
